@@ -1,6 +1,7 @@
-cismer -p <pssms> -g <genome.fasta> -f <target.fasta> [-hvaim][-r cutoff][-d cutoff][-s seed][-z cutoff]
+cismer v2.3
 
-cismer -p <pssms> -g <genome_background.fasta> -f <cluster.fasta> [-hvai][-r cutoff][-d cutoff][-s seed][-z cutoff]
+usage:
+cismer -p _pssms_ -g _genomebackground.fasta_ -f _cluster.fasta_ [-hvai][-r cutoff][-d cutoff][-s seed][-z cutoff]
 
 	-	- read the pssm output from stdin
 
