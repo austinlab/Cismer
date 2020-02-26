@@ -9,7 +9,7 @@ clean:
 	-rm ${OBJ}
 
 cismer: seq.o
-	gcc -O2 ${CFLAGS} -lm seq.o -o cismer cismer.c
+	gcc -O2 ${CFLAGS} -lm seq.o -o cismer cismer.c -lm
 cismer.o: ${INCLUDE} cismer.c
 	gcc -c ${CFLAGS} cismer.c
 seq.o: ${INCLUDE} seq.c
