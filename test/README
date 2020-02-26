@@ -1,0 +1,42 @@
+Examples:
+
+1) Test leafy motif against inflorescence genes (note there are 500, but typically 20-100 is best) also not significant here
+
+$ cismer -p leafy.pssm -g TAIR10_upstream750TSS250down.fasta -f InflRegions750up250down.fasta
+
+cismer v2.3.2
+>	Leafy Z:0.18
+47	14	12	3	79	4	3	52	30	14	26	19	56	8	43	33	25
+10	21	7	5	7	89	90	0	22	21	4	15	6	35	25	19	17
+11	23	47	86	3	4	2	37	8	3	67	61	21	7	1	12	21
+31	41	33	5	10	2	4	10	39	61	2	4	16	49	30	35	36
+
+
+2) Test leaf against inflorescense with a functional depth cutoff of 0.5 (very under-represented - secondary motif likely at play (Wagner et al 2011))
+
+$ cismer -p leafy.pssm -g TAIR10_upstream750TSS250down.fasta -f InflRegions750up250down.fasta -d 0.5 -b 100
+
+cismer v2.3.2
+>	Leafy Z:-7.71
+47	14	12	3	79	4	3	52	30	14	26	19	56	8	43	33	25
+10	21	7	5	7	89	90	0	22	21	4	15	6	35	25	19	17
+11	23	47	86	3	4	2	37	8	3	67	61	21	7	1	12	21
+31	41	33	5	10	2	4	10	39	61	2	4	16	49	30	35	36
+
+
+3) Just scan leafy against Infloresence regions with functional depth cutoff of 0.3. Output is: Gene, start, stop, motif, FD, strand
+
+$ cismer -m -p leafy.pssm -f InflRegions750up250down.fasta -d 0.3 | head
+
+cismer v2.3.2
+AT1G01490	1	17	Leafy	0.42	+
+AT1G01490	2	18	Leafy	0.45	+
+AT1G01490	3	19	Leafy	0.35	+
+AT1G01490	5	21	Leafy	0.52	+
+AT1G01490	6	22	Leafy	0.43	+
+AT1G01490	7	23	Leafy	0.31	+
+AT1G01490	8	24	Leafy	0.41	+
+AT1G01490	9	25	Leafy	0.37	+
+AT1G01490	14	30	Leafy	0.38	+
+AT1G01490	15	31	Leafy	0.49	+
+...
