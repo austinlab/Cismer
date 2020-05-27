@@ -6,6 +6,7 @@ PSSMs against a collection of promoters, returning the hit position, strand and 
 
 cismer v2.3
 
+'''
 usage:
 cismer -p _pssms_ -g _genomebackground.fasta_ -f _cluster.fasta_ [-hvai][-r cutoff][-d cutoff][-s seed][-z cutoff]
 
@@ -28,7 +29,7 @@ cismer -p _pssms_ -g _genomebackground.fasta_ -f _cluster.fasta_ [-hvai][-r cuto
 	-m	- just map the pssms against the fasta file (-f)
 
 	-h	- print this usage message
-
+'''
 
 Cite:  Ryan S Austin, Shu Hiu, Jamie Waese, Matthew Ierullo, Asher Pasha, Ting Ting Wang, Jim Fan, Curtis Foong, Robert Breit, 
 Darrell Desveaux, Alan Moses, Nicholas J Provart.  **New BAR tools for mining expression data and exploring Cis‐elements in Arabidopsis
